@@ -1,6 +1,12 @@
 #include "gmock/gmock.h"
+#include "getMeHello.h"
 
-TEST(TrivialTests, CheckThatOneIsOne)
+TEST(TestHelloWorld, WhatIsntValue)
 {
-  ASSERT_EQ(1, 1);
+  ASSERT_NE(getMeHello(), "Hello demo");
+}
+
+TEST(TestHelloWorld, WhatIsValue)
+{
+  ASSERT_EQ(getMeHello(), "Hello World");
 }
